@@ -1,4 +1,4 @@
-<h1>Online-Sports-Shope</h1>
+<h1>Online sports shop</h1>
 
 # Project overview
 <p>
