@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Styles/style.css">
+  <title>Document</title>
+  <script>
+    // Remove the "no-js" class from the <html> element (JS is available)
+    document.documentElement.classList.remove("no-js")
+  </script>
+  <script defer src="./scripts/app.min.js"></script>
+</head>
+
+<body>
+  <div class="site-wrapper">
+    <header class="header">
+      <div class="header-wrapper">
+        <nav class="menu">
+          <button class="menu__toggle" id="menu-toggle" aria-label="Show/hide menu">
+            <span aria-hidden="true">☰</span>
+            Menu
+          </button>
+          <ul class="menu__items" id="menu">
+            <li class="menu__item"><a class="menu__link" href="#">Login</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">About SW</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Contact Us</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">View Products</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+    <div class="sw-container">
+      <img src="Resources/sports-warehouse-logo.svg" />
+    </div>
+  </div>
+</body>
+
+</html>

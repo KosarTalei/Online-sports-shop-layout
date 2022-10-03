@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Screen-reader only text */
+.sr-only:not(:focus) {
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+}
+
+.clearfix,
+.cf {
+    display: flow-root;
+}
+
+/*
+    Generic image resizer to make images "responsive".
+    Images should always fit into their container & stay in proportion, e.g. max-width: 100% + height: auto;
+   */
+img,
+picture {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    /* object-fit: contain; */
+}
+
+.header {
+    width: 100%;
+    background-color: #00aced;
+    color: #ddd;
+}
+
+.header-wrapper {
+    max-width: 100%;
+}
+
+#menu {
+    display: none;
+}
+
+/* Show menu when it has a "show" class applied to it */
+#menu.show {
+    display: flex;
+    /* display: block; */
+}
+
+
+@media only screen and (min-width: 600px) {
+
+    /* Hide menu toggle on desktop */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Show menu on desktop */
+    #menu {
+        display: flex;
+        /* display: block; */
+    }
+
+}
+
+/*
+    "no-js" styling for when JavaScript is NOT running in the browser
+    Hide the menu toggle and show the menu
+  */
+
+.no-js #menu-toggle {
+    display: none;
+}
+
+.no-js #menu {
+    display: flex;
+}
+
+
+/* OPTIONAL STYLING - Just for appearance */
+
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    color: #0c6a8d;
+}
+
+.site-wrapper {
+    max-width: 960px;
+    margin: 10px;
+    padding: 1em;
+    background-color: white;
+    color: #444;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 980px) {
+    .site-wrapper {
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+}
+
+
+.menu {}
+
+.menu__toggle {
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #00aced;
+    color: white;
+}
+
+/* Hover effects on mobile are hilarious... but focus styling is super useful! */
+.menu__toggle:hover,
+.menu__toggle:focus {
+    background: #0c6a8d;
+}
+
+.menu__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: white;
+}
+
+.menu__item {
+    margin: 0;
+    padding: 0;
+}
+
+.menu__link {
+    display: block;
+    padding: 0.3em 0.6em;
+    background-color: #00aced;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+    background-color: #00aeede6;
+    color: white;
+}
+
+@media only screen and (min-width: 600px) {
+
+    .menu__items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0.3em;
+    }
+
+    .menu__link {
+        padding: 0.4em 0.8em;
+    }
+
+}
+
+
+
+/*
+    https://tympanus.net/Tutorials/ResponsiveSVGs/index6.html
+*/
+.sw-container {
+    /*border: 10px solid #b6bdc3;*/
+    width: 100%;
+    background: #fff;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Required to make image fluid in IE */
+img:not(.png) {
+    width: 100%;
+}
