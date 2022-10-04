@@ -17,7 +17,7 @@
 <body>
   <div class="site-wrapper">
     <header class="header">
-      <div class="header-wrapper">
+      <div class="header__links">
         <nav class="menu">
           <button class="menu__toggle" id="menu-toggle" aria-label="Show/hide menu">
             <span aria-hidden="true">☰</span>
@@ -31,9 +31,15 @@
             <li class="menu__item"><a class="menu__link" href="#">View Products</a></li>
           </ul>
         </nav>
-
+      </div>
+      <div class="header-shopcart">
+        <ul class="header-shopcart__items">
+        <li><a class="header-shopcart__items__view" href="#">View Cart</a></li>
+        <li><a class="header-shopcart__items__cart-items-count">0 items</a></li>
+        </ul>
       </div>
     </header>
+
     <div class="sw-container">
       <img src="Resources/sports-warehouse-logo.svg" />
     </div>
