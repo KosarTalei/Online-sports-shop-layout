@@ -129,7 +129,7 @@ a:hover {
 
 .menu__toggle {
     display: inline-block;
-    margin-bottom: 1em;
+    margin: 0.6em 0.6em;
     padding: 0.6em 1em;
     border: none;
     border-radius: 5px;
@@ -236,4 +236,21 @@ img:not(.png) {
     display: inline-block;
     margin-bottom: 1em;
     padding: 0.6em 1em;
+}
+.longeLable {
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    
+}
+.search__products{
+    padding: 10px;
+    display: block;
+    border: 2px solid #ccc;
+    outline: none;
+}
+.search{
+    display: flex;
+    justify-content: center;
+    max-width: 1000;
 }
