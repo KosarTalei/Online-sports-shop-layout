@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Styles/style.css">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/149a0b0e8d.js" crossorigin="anonymous"></script>
   <script>
     // Remove the "no-js" class from the <html> element (JS is available)
     document.documentElement.classList.remove("no-js")
@@ -34,6 +35,7 @@
       </div>
       <div class="header-shopcart">
         <ul class="header-shopcart__items">
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
         <li><a class="header-shopcart__items__view" href="#">View Cart</a></li>
         <li><a class="header-shopcart__items__cart-items-count">0 items</a></li>
         </ul>
@@ -48,10 +50,21 @@
        placeholder="Search Products" 
       value="">
       <!--<label for="Search" class="longeLabel">Search Products</label>-->
-      <button class="menu__toggle" id="menu-toggle" aria-label="Show/hide menu">
-        <span aria-hidden="true">☰</span>
+      <button class="search__toggle" id="search-toggle" aria-label="Show/hide search results">
+        <i class="fa-solid fa-magnifying-glass"></i>
       </button>
     </form>
+    <nav class="category">
+      <ul class="category__items" id="category">
+        <li class="category__item"><a class="category__link" href="#">Shoes</a></li>
+        <li class="category__item"><a class="category__link" href="#">Helmets</a></li>
+        <li class="category__item"><a class="category__link" href="#">Pants</a></li>
+        <li class="category__item"><a class="category__link" href="#">Tops</a></li>
+        <li class="category__item"><a class="category__link" href="#">Balls</a></li>
+        <li class="category__item"><a class="category__link" href="#">Equipment</a></li>
+        <li class="category__item"><a class="category__link" href="#">Training  gear</a></li>
+      </ul>
+    </nav>
   </div>
 </body>
 

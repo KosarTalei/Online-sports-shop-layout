@@ -42,7 +42,10 @@ picture {
     height: auto;
     width: 100%;
 }
-
+.header__links{
+    margin-bottom: 1em;
+    padding: 0.6em 1em;
+}
 .header-wrapper {
     max-width: 100%;
 }
@@ -129,8 +132,8 @@ a:hover {
 
 .menu__toggle {
     display: inline-block;
-    margin: 0.6em 0.6em;
-    padding: 0.6em 1em;
+    /*margin: 0.6em 0.6em;
+    padding: 0.6em 1em;*/
     border: none;
     border-radius: 5px;
     background-color: #00aced;
@@ -202,7 +205,10 @@ img:not(.png) {
 }
 
 /*shopping cart*/
-.header-shopcart {}
+.header-shopcart {
+    margin-bottom: 1em;
+    padding: 0.6em 1em;
+}
 
 .header-shopcart__items {
     display: flex;
@@ -223,8 +229,10 @@ img:not(.png) {
 
 .header-shopcart__items__cart-items-count {
     display: inline-block;
-    margin-bottom: 1em;
-    padding: 0.6em 1em;
+    /*margin-bottom: 1em;
+    padding: 0.6em 1em;*/
+    margin: 0;
+    padding: 1px 6px;
     
     border: none;
     border-radius: 5px;
@@ -234,23 +242,88 @@ img:not(.png) {
 }
 .header-shopcart__items__view{
     display: inline-block;
-    margin-bottom: 1em;
-    padding: 0.6em 1em;
+    margin: 0;
+    /*margin-bottom: 1em;
+    padding: 0.6em 1em;*/
+}
+.fa-cart-shopping{
+    color: white;
 }
 .longeLable {
     border-radius: 25px;
     box-sizing: border-box;
-    border: 3px solid #ccc;
-    
+    padding-left: 5px;
+    border: 1px solid #002936;
 }
 .search__products{
     padding: 10px;
     display: block;
-    border: 2px solid #ccc;
     outline: none;
+    margin-right: 10px;
 }
 .search{
     display: flex;
     justify-content: center;
-    max-width: 1000;
+}
+
+.search__toggle{
+    display: inline-block;
+    /*position: relative;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;*/
+
+    border: none;
+    border-radius: 50%;
+    /*padding: 2px 4px;*/
+    padding: 10px;
+    border-left: none; /* Prevent double borders */
+    background: #002936;
+    color: white;
+}
+/* Hover effects on mobile are hilarious... but focus styling is super useful! */
+.search__toggle:hover,
+.search__toggle:focus {
+    background: #0c6a8d;
+}
+
+.category{
+    background:#002936;
+    margin-top: 10px;
+    padding: 10px;
+    
+}
+.category__items {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    /*justify-content: space-around;*/
+    vertical-align: middle;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+.category__item {
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 5px;
+    border: 1px solid #00aced;
+    max-width: 50%;
+}
+.category a{
+margin-left: auto;
+}
+.category a::after {
+    justify-content: flex-end;
+    content: "❯";
+    position: absolute;
+    /*display: inline-block;
+    margin: 0 auto;
+    padding: auto;
+    color: #00aced;
+    font-size: 0.8em;
+    vertical-align:baseline;*/
 }
