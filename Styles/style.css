@@ -1,7 +1,5 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 /* Screen-reader only text */
@@ -40,9 +38,11 @@ picture {
     height: auto;
     width: 100%;
 
-    box-shadow: 1px 1px 5px 0px #0c6a8d;
+    /*box-shadow: 1px 1px 5px 0px #0c6a8d;*/
     position: sticky;
     top: 0;
+    margin: 0;
+    padding: 0;
 }
 .header__links{
     display: flex;
@@ -57,9 +57,10 @@ picture {
 body {
     background-color: rgb(255, 255, 255);
     color: #333;
-    font-family: sans-serif, Helvetica, Arial;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
     margin: 0 auto;
+    padding: 0;
 }
 
 a {
@@ -74,6 +75,10 @@ a:hover {
 ul{
     list-style: none;
 }
+span{
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 .site-wrapper {
     width: 100%;
@@ -85,8 +90,10 @@ ul{
 
 @media only screen and (min-width: 980px) {
     .site-wrapper {
-        margin: 10px auto;
-        border-radius: 10px;
+        /*margin: 10px auto;
+        border-radius: 10px;*/
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -99,9 +106,14 @@ ul{
     overflow: hidden;
 
 }
+.menu{
+    padding: 0;
+    margin: 0;
+}
 .menu a{
     display: block;
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     color: white;
 }
 .menu a:hover{
@@ -167,6 +179,12 @@ ul{
     background-color: #00aced;
     width: 100%;
 }
+.menu__link::after{
+    padding-bottom: 10px;
+    content: "";
+    display: block;
+    border-bottom: 1px solid white;
+}
 
 .menu__link:hover,
 .menu__link:focus {
@@ -184,15 +202,7 @@ ul{
     padding-left: 0;
 }
 .fa-lock{
-    background-color: #00aced;
-    background: #00aced;
     color: white;
-    display: block;
-    padding: 0.3em 0.6em 0.3em 30px;
-    background-color: #00aced;
-}
-.fa-lock:hover{
-    background: #0c6a8d;
 }
 @media only screen and (min-width: 600px) {
 
@@ -321,11 +331,8 @@ img:not(.png) {
     padding: 10px;
 }
 .category__items {
-    display: flex;
-    flex-flow: row wrap;
-    flex-shrink: 2;
-    align-items: baseline;
-    vertical-align: middle;
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr);
     gap: 10px;/* row-gap column gap */
     list-style-type: none;
     margin: 0;
