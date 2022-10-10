@@ -63,7 +63,7 @@ body {
     padding: 0;
 }
 
-a {
+a,h1, h2{
     color: white;
     text-decoration: none;
 }
@@ -359,4 +359,23 @@ img:not(.png) {
 }
 .fa-chevron-right:hover, .fa-chevron-right:focus{
     color: white;
+}
+
+.products-line{
+    background-color: #FF690c;
+    border-radius: 5rem 0 0 5rem;
+    box-sizing: border-box;
+    padding: 0 0 0 2rem;
+}
+.products-container{
+    padding-left: 1rem;
+}
+.brands-line{
+    background-color: #FF690c;
+    border-radius: 5rem 0 0 5rem;
+    box-sizing: border-box;
+    padding: 0 0 0 2rem;
+}
+.brands-container{
+    padding-left: 1rem;
 }

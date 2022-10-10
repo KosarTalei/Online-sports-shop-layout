@@ -34,51 +34,115 @@
       <nav class="nav">
         <ul class="menu">
           <li class="menu__item"><a class="menu__link" href="#">
-            <span><i class="fa-solid fa-lock"></i></span>Login</a></li>
+              <span><i class="fa-solid fa-lock"></i></span>Login</a></li>
           <li class="menu__item"><a class="menu__link" href="#">
-            <span><i class="fa-regular fa-circle"></i></span>Home</a></li>
+              <span><i class="fa-regular fa-circle"></i></span>Home</a></li>
           <li class="menu__item"><a class="menu__link" href="#">
-            <span><i class="fa-regular fa-circle"></i></span>About SW</a></li>
+              <span><i class="fa-regular fa-circle"></i></span>About SW</a></li>
           <li class="menu__item"><a class="menu__link" href="#">
-            <span><i class="fa-regular fa-circle"></i></span>Contact Us</a></li>
+              <span><i class="fa-regular fa-circle"></i></span>Contact Us</a></li>
           <li class="menu__item"><a class="menu__link" href="#">
-            <span><i class="fa-regular fa-circle"></i></span>View Products</a></li>
+              <span><i class="fa-regular fa-circle"></i></span>View Products</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="sw-container">
-      <img src="Resources/sports-warehouse-logo.svg" />
-    </div>
-    <form class="search" action="#">
-      <input class="search__products longeLable" type="text" name="productName" id="productName"
-        placeholder="Search Products" value="">
-      <!--<label for="Search" class="longeLabel">Search Products</label>-->
-      <button class="search__toggle" id="search-toggle" aria-label="Show/hide search results">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-    <nav class="category">
-      <ul class="category__items" id="category__items">
-        <li class="category__item">
-          <a class="category__link" href="#">Shoes</a>
-          <i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Helmets</a><i
-            class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Pants</a><i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Tops</a><i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Balls</a><i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Equipment</a><i
-            class="fa-solid fa-chevron-right"></i></li>
-        <li class="category__item"><a class="category__link" href="#">Training gear</a><i
-            class="fa-solid fa-chevron-right"></i></li>
-      </ul>
-    </nav>
+    <section>
+      <div class="sw-container">
+        <h1 class="sr-only">SW Sports Warehouse</h1>
+        <img src="Resources/sports-warehouse-logo.svg" />
+      </div>
+      <form class="search" action="#">
+        <input class="search__products longeLable" type="text" name="productName" id="productName"
+          placeholder="Search Products" value="">
+        <!--<label for="Search" class="longeLabel">Search Products</label>-->
+        <button class="search__toggle" id="search-toggle" aria-label="Show/hide search results">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <nav class="category">
+        <ul class="category__items" id="category__items">
+          <li class="category__item">
+            <a class="category__link" href="#">Shoes</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </li>
+          <li class="category__item"><a class="category__link" href="#">Helmets</a><i
+              class="fa-solid fa-chevron-right"></i>
+          </li>
+          <li class="category__item"><a class="category__link" href="#">Pants</a><i
+              class="fa-solid fa-chevron-right"></i>
+          </li>
+          <li class="category__item"><a class="category__link" href="#">Tops</a><i
+              class="fa-solid fa-chevron-right"></i>
+          </li>
+          <li class="category__item"><a class="category__link" href="#">Balls</a><i
+              class="fa-solid fa-chevron-right"></i>
+          </li>
+          <li class="category__item"><a class="category__link" href="#">Equipment</a><i
+              class="fa-solid fa-chevron-right"></i></li>
+          <li class="category__item"><a class="category__link" href="#">Training gear</a><i
+              class="fa-solid fa-chevron-right"></i></li>
+        </ul>
+      </nav>
+
+      <div class="products-container">
+        <h2 class="products-line">Featured products</h2>
+        <div class="products">
+          <article class="products__item item">
+            <div class="item__photo-frame">
+              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+            </div>
+            <h3 class="item__name">item Name</h3>
+            <p class="item__description">Information about the item goes here that explains the image above.</p>
+          </article>
+          <article class="products__item item">
+            <div class="item__photo-frame">
+              <img src="https://placekitten.com/g/300/120" class="item__photo" width="300" height="120"
+                alt="Photo of item Name">
+            </div>
+            <h3 class="item__name">item Name</h3>
+            <p class="item__description">Information about the item goes here that explains the image above.</p>
+          </article>
+          <article class="products__item item">
+            <div class="item__photo-frame">
+              <img src="https://placekitten.com/g/120/300" class="item__photo" width="120" height="300"
+                alt="Photo of item Name">
+            </div>
+            <h3 class="item__name">item Name</h3>
+            <p class="item__description">Information about the item goes here that explains the image above.</p>
+          </article>
+          <article class="products__item item">
+            <div class="item__photo-frame">
+              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+            </div>
+            <h3 class="item__name">item Name</h3>
+            <p class="item__description">Information about the item goes here that explains the image above.</p>
+          </article>
+          <article class="products__item item">
+            <div class="item__photo-frame">
+              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+            </div>
+            <h3 class="item__name">item Name</h3>
+            <p class="item__description">Information about the item goes here that explains the image above.</p>
+          </article>
+          <article class="products__item item">
+            <div class="item__photo-frame">
+              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+            </div>
+            <h3 class="item__name">item Name</h3>
+            <p class="item__description">Information about the item goes here that explains the image above.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="brands-container">
+        <h2 class="brands-line">Our brands and partnerships</h2>
+        <p>These are some of our top brands<span>The best of the best is here.</span></p>
+        <nav class="brands">
+        </nav>
+      </div>
+    </section>
+
   </div>
 </body>
 
