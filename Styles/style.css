@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Screen-reader only text */
@@ -30,73 +32,33 @@ picture {
 
 .header {
     background-color: #00aced;
-    color: #ddd;
+    color: white;
     margin: 0 auto;
 
     max-width: 100%;
     max-height: 100%;
     height: auto;
     width: 100%;
+
+    box-shadow: 1px 1px 5px 0px #0c6a8d;
+    position: sticky;
+    top: 0;
 }
 .header__links{
     display: flex;
-    /*justify-content: space-between;*/
-    /*margin-bottom: 1em;
-    padding: 0.6em 1em;*/
+    justify-content: space-between;
+    padding: 10px;
 }
 .header-wrapper {
     max-width: 100%;
 }
 
-#menu {
-    display: none;
-}
-
-/* Show menu when it has a "show" class applied to it */
-#menu.show {
-    display: flex;
-    /* display: block; */
-}
-
-
-@media only screen and (min-width: 600px) {
-
-    /* Hide menu toggle on desktop */
-    #menu-toggle {
-        display: none;
-    }
-
-    /* Show menu on desktop */
-    #menu {
-        display: flex;
-        /* display: block; */
-    }
-
-}
-
-/*
-    "no-js" styling for when JavaScript is NOT running in the browser
-    Hide the menu toggle and show the menu
-  */
-
-.no-js #menu-toggle {
-    display: none;
-}
-
-.no-js #menu {
-    display: flex;
-}
-
-
 /* OPTIONAL STYLING - Just for appearance */
-
-
 body {
     background-color: rgb(255, 255, 255);
     color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif, Helvetica, Arial;
     font-size: 1.1em;
-
     margin: 0 auto;
 }
 
@@ -108,6 +70,9 @@ a {
 a:focus,
 a:hover {
     color: #0c6a8d;
+}
+ul{
+    list-style: none;
 }
 
 .site-wrapper {
@@ -125,38 +90,72 @@ a:hover {
     }
 }
 
-
-.menu {
-    margin: 0;
-    padding: 0;
-}
-
-.menu__toggle {
-    display: inline-block;
-    /*margin: 0.6em 0.6em;
-    padding: 0.6em 1em;*/
-    border: none;
-    border-radius: 5px;
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
     background-color: #00aced;
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
     color: white;
 }
+.menu a:hover{
+    background-color: #0c6a8d;
+}
+.login > *:hover{
+    background-color: #0c6a8d;
+}
+.nav{
+    max-height: 0;
+}
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    /*float: left;
+    padding: 40px 20px;*/
+}/* Style label tag */
 
-/* Hover effects on mobile are hilarious... but focus styling is super useful! */
-.menu__toggle:hover,
-.menu__toggle:focus {
-    background: #0c6a8d;
+.hamb-line {
+    background: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
 }
 
-.menu__items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2em;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    background-color: white;
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
 }
-
+.side-menu:checked ~ .hamb .hamb-line {
+    /*background: transparent;*/
+    background: #00aced;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    top:0;
+}
 .menu__item {
     margin: 0;
     padding: 0;
@@ -176,16 +175,25 @@ a:hover {
 }
 .login{
     display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0;
+}
+.login a{
+    padding-left: 0;
 }
 .fa-lock{
     background-color: #00aced;
     background: #00aced;
     color: white;
     display: block;
-    padding: 0.3em 0.6em 0.3em 0;
+    padding: 0.3em 0.6em 0.3em 30px;
     background-color: #00aced;
 }
-
+.fa-lock:hover{
+    background: #0c6a8d;
+}
 @media only screen and (min-width: 600px) {
 
     .menu__items {
@@ -221,9 +229,12 @@ img:not(.png) {
 .header-shopcart {
     /*margin-bottom: 1em;
     padding: 0.6em 1em;*/
-    margin: 0;
+    /*margin: 0;
     padding: 0;
-    display: block;
+    display: block;*/
+    display: inline-block;
+    color: (white);
+    margin-left: 10px;
 }
 
 .header-shopcart__items {

@@ -13,23 +13,12 @@
 <body>
   <div class="site-wrapper">
     <header class="header">
+      <!-- Hamburger icon -->
+      <input class="side-menu" type="checkbox" id="side-menu" />
       <div class="header__links">
-        <label class="menu" for="a">
-          <span aria-hidden="true">☰</span>
+        <label class="hamb" for="side-menu"><span class="menu-line" aria-hidden="true">☰</span>
           Menu
         </label>
-        <input type="checkbox" id="a" />
-        <ul class="menu__items" id="menu">
-          <li class="menu__item login">
-            <i class="fa-solid fa-lock"></i>
-            <a class="menu__link" href="#">Login</a>
-          </li>
-          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">About SW</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">Contact Us</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">View Products</a></li>
-        </ul>
-
         <div class="header-shopcart">
           <ul class="header-shopcart__items">
             <li><i class="fa-solid fa-cart-shopping"></i></li>
@@ -38,39 +27,54 @@
           </ul>
         </div>
       </div>
-    </header>
+      <!-- Menu -->
+      <nav class="nav">
+        <ul class="menu">
+          <li class="login">
+            <i class="fa-solid fa-lock"></i>
+            <a class="menu__link" href="#">Login</a>
+          </li>
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About SW</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact Us</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">View Products</a></li>
+        </ul>
+      </nav>
 
-    <div class="sw-container">
-      <img src="Resources/sports-warehouse-logo.svg" />
-    </div>
-    <form class="search" action="#">
-      <input class="search__products longeLable" type="text" name="productName" id="productName"
-        placeholder="Search Products" value="">
-      <!--<label for="Search" class="longeLabel">Search Products</label>-->
-      <button class="search__toggle" id="search-toggle" aria-label="Show/hide search results">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-    <nav class="category">
-      <ul class="category__items" id="category__items">
-        <li class="category__item">
-          <a class="category__link" href="#">Shoes</a>
-          <i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Helmets</a><i
-            class="fa-solid fa-chevron-right"></i></li>
-        <li class="category__item"><a class="category__link" href="#">Pants</a><i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Tops</a><i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Balls</a><i class="fa-solid fa-chevron-right"></i>
-        </li>
-        <li class="category__item"><a class="category__link" href="#">Equipment</a><i
-            class="fa-solid fa-chevron-right"></i></li>
-        <li class="category__item"><a class="category__link" href="#">Training gear</a><i
-            class="fa-solid fa-chevron-right"></i></li>
-      </ul>
-    </nav>
+  </div>
+  </header>
+
+  <div class="sw-container">
+    <img src="Resources/sports-warehouse-logo.svg" />
+  </div>
+  <form class="search" action="#">
+    <input class="search__products longeLable" type="text" name="productName" id="productName"
+      placeholder="Search Products" value="">
+    <!--<label for="Search" class="longeLabel">Search Products</label>-->
+    <button class="search__toggle" id="search-toggle" aria-label="Show/hide search results">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+  <nav class="category">
+    <ul class="category__items" id="category__items">
+      <li class="category__item">
+        <a class="category__link" href="#">Shoes</a>
+        <i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li class="category__item"><a class="category__link" href="#">Helmets</a><i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li class="category__item"><a class="category__link" href="#">Pants</a><i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li class="category__item"><a class="category__link" href="#">Tops</a><i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li class="category__item"><a class="category__link" href="#">Balls</a><i class="fa-solid fa-chevron-right"></i>
+      </li>
+      <li class="category__item"><a class="category__link" href="#">Equipment</a><i
+          class="fa-solid fa-chevron-right"></i></li>
+      <li class="category__item"><a class="category__link" href="#">Training gear</a><i
+          class="fa-solid fa-chevron-right"></i></li>
+    </ul>
+  </nav>
   </div>
 </body>
 
