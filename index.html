@@ -14,38 +14,38 @@
 </head>
 
 <body>
-  <div class="site-wrapper">
-    <header class="header">
-      <!-- Hamburger icon -->
-      <input class="side-menu" type="checkbox" id="side-menu" />
-      <div class="header__links">
-        <label class="hamb" for="side-menu"><span class="menu-line" aria-hidden="true">☰</span>
-          Menu
-        </label>
-        <div class="header-shopcart">
-          <ul class="header-shopcart__items">
-            <li><i class="fa-solid fa-cart-shopping"></i></li>
-            <li><a class="header-shopcart__items__view" href="#">View Cart</a></li>
-            <li><a class="header-shopcart__items__cart-items-count">0 items</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- Menu -->
-      <nav class="nav">
-        <ul class="menu">
-          <li class="menu__item"><a class="menu__link" href="#">
-              <span><i class="fa-solid fa-lock"></i></span>Login</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">
-              <span><i class="fa-regular fa-circle"></i></span>Home</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">
-              <span><i class="fa-regular fa-circle"></i></span>About SW</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">
-              <span><i class="fa-regular fa-circle"></i></span>Contact Us</a></li>
-          <li class="menu__item"><a class="menu__link" href="#">
-              <span><i class="fa-regular fa-circle"></i></span>View Products</a></li>
+  <header class="header wrapper">
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="side-menu" />
+    <div class="header__links">
+      <label class="hamb" for="side-menu"><span class="menu-line" aria-hidden="true">☰</span>
+        Menu
+      </label>
+      <div class="header-shopcart">
+        <ul class="header-shopcart__items">
+          <li><i class="fa-solid fa-cart-shopping"></i></li>
+          <li><a class="header-shopcart__items__view" href="#">View Cart</a></li>
+          <li><a class="header-shopcart__items__cart-items-count">0 items</a></li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
+    <!-- Menu -->
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">
+            <span><i class="fa-solid fa-lock"></i></span>Login</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">
+            <span><i class="fa-regular fa-circle"></i></span>Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">
+            <span><i class="fa-regular fa-circle"></i></span>About SW</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">
+            <span><i class="fa-regular fa-circle"></i></span>Contact Us</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">
+            <span><i class="fa-regular fa-circle"></i></span>View Products</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="site-wrapper">
 
     <section>
       <div class="sw-container">
@@ -86,18 +86,18 @@
       </nav>
 
       <div class="products-container">
-        <h2 class="products-line">Featured products</h2>
+        <div class="container-line"><h2 class="products-line">Featured products</h2></div>
         <div class="products">
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+              <img src="./Resources/Images/soccer-ball.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
             </div>
             <h3 class="item__name">item Name</h3>
             <p class="item__description">Information about the item goes here that explains the image above.</p>
           </article>
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="https://placekitten.com/g/300/120" class="item__photo" width="300" height="120"
+              <img src="./Resources/Images/skate-helmet.png" class="item__photo" width="300" height="120"
                 alt="Photo of item Name">
             </div>
             <h3 class="item__name">item Name</h3>
@@ -105,7 +105,7 @@
           </article>
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="https://placekitten.com/g/120/300" class="item__photo" width="120" height="300"
+              <img src="./Resources/Images/water-bottle.png" class="item__photo" width="120" height="300"
                 alt="Photo of item Name">
             </div>
             <h3 class="item__name">item Name</h3>
@@ -113,21 +113,14 @@
           </article>
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+              <img src="./Resources/Images/boxing-gloves.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
             </div>
             <h3 class="item__name">item Name</h3>
             <p class="item__description">Information about the item goes here that explains the image above.</p>
           </article>
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
-            </div>
-            <h3 class="item__name">item Name</h3>
-            <p class="item__description">Information about the item goes here that explains the image above.</p>
-          </article>
-          <article class="products__item item">
-            <div class="item__photo-frame">
-              <img src="./images/item.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
+              <img src="./Resources/Images/football-boots.png" class="item__photo" width="110" height="118" alt="Photo of item Name">
             </div>
             <h3 class="item__name">item Name</h3>
             <p class="item__description">Information about the item goes here that explains the image above.</p>
@@ -136,7 +129,7 @@
       </div>
 
       <div class="brands-container">
-        <h2 class="brands-line">Our brands and partnerships</h2>
+        <div class="container-line"><h2 class="brands-line">Our brands and partnerships</h2></div>
         <p>These are some of our top brands<span>The best of the best is here.</span></p>
         <nav class="brands">
         </nav>
