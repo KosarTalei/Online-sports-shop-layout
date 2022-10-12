@@ -311,7 +311,7 @@ img:not(.png) {
     border: none;
     border-radius: 5px;
     /*background-color: #00aced;*/
-    background: #599eb7;
+    background: #595959;
     color: white;
 }
 
@@ -412,7 +412,8 @@ img:not(.png) {
 }
 
 .products-line, .brands-line {
-    padding: 0.2em 0 0.2em 0;
+    /*padding: 0.2em 0 0.2em 0;*/
+    margin: 0.6em;
 }
 
 .products-container {
@@ -422,11 +423,7 @@ img:not(.png) {
     background-color: #FF690c;
     border-radius: 5rem 0 0 5rem;
     box-sizing: border-box;
-    padding: 0 0 0 2rem;
-}
-
-.brands-container {
-    padding-left: 1rem;
+    margin: 0.6em;
 }
 
 .products {
@@ -474,4 +471,81 @@ img:not(.png) {
 
 .item__description {
     margin: 0;
+}
+
+b.special {
+    font-weight: inherit;
+    padding: 0 0.5em 0.5em 0.5em;
+    margin: 0;
+    color: #00aced;
+}
+.brands-container {
+    
+}
+
+.brands{
+    display: grid;
+    grid-template-columns: repeat(3, [col-start] 1fr);
+    align-items: center;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+    background-color: #002936;
+    padding: 0.5em 1.25em;
+    margin: 1.25em 0 1.25em 0;
+}
+.brand__photo-frame{
+    margin: 0.5em;
+}
+.brands-description{
+    padding: 0 0.5em 0.5em 0.5em;
+    margin: 0;
+    color: #595959;
+}
+.site-nav{
+    background: #00aced;
+    padding: 0.5em 2em 2em 2em;
+}
+.site-nav__items{
+    position: relative;
+    margin: 1.88em 0.3em 0 0.3em;
+    list-style: none;
+    padding-left: 0.6em;
+    font-size: 14px;
+    font-weight: 400;
+}
+.site-nav__item{
+    background-image: url(../Resources/Images/Rectangle.png);
+    background-repeat: no-repeat;
+    line-height: 0.5em;
+    margin-bottom: 0.875em;
+}
+.site-nav__item > a{
+    margin-left: 1.25em;
+}
+.contact-us{
+    background: #00aced;
+    padding: 0.5em 2em 2em 2em;
+    margin: 0;
+}
+.contact-us__options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.contact-us__option{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 15px;
+    color: #fff;
+}
+.circle{
+    width: 80px;
+    height: 80px;
+    border: 1px solid white;
+    aspect-ratio: 1 / 1;
+    border-radius:50%;
+    margin: 0.9em;
 }
