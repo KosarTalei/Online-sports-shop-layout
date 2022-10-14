@@ -424,6 +424,11 @@ img:not(.png) {
     color: white;
 }
 
+.category__link:focus,
+.category__link:hover {
+    color: white;
+}
+
 .products-line,
 .brands-line {
     padding: 0.313em 0;
@@ -628,6 +633,7 @@ b.special {
     font-size: 15px;
     color: #fff;
 }
+
 .circle {
     display: flex;
     flex-direction: row;
@@ -682,7 +688,7 @@ b.special {
 }
 
 @media only screen and (min-width: 722px) {
-    .category{
+    .category {
         display: flex;
         min-height: 60px;
         padding: 0.3em 0 0.3em 0;
@@ -690,16 +696,18 @@ b.special {
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
         margin: 0 0 1.38rem 0;
-        
+
     }
-    .category__item{
+
+    .category__item {
         background-color: #002936;
         width: auto;
         border: none;
         margin: 0.3em 0 0.3em 0;
-        padding: 0.2em 0 0.4em 0;
+        padding: 0.2em 0 0.4em 0.4em;
     }
-    .category__items{
+
+    .category__items {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -710,7 +718,160 @@ b.special {
         align-content: center;
         gap: 0;
     }
+
     .arrow {
         visibility: hidden;
+    }
+
+    .category__item:hover,
+    .category__item:focus {
+        border: none;
+        background-color: #00aced;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .item {
+        border: 1px solid rgb(233, 229, 229);
+        border-radius: 0.5em;
+    }
+
+    .item:focus,
+    .item:hover {
+        background-image: linear-gradient(white, white),
+            /*background*/
+            linear-gradient(to left, #FF690c, rgb(233, 229, 229));
+        padding: 0.1em;
+        /*control border width*/
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+
+    .products {
+        justify-content: center;
+    }
+}
+
+.slideshow {
+    display: none;
+}
+
+@media only screen and (min-width: 700px) {
+    .slideshow {
+        /*display: inline;*/
+        width: auto;
+        height: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    /*.slideshow__slider:first-child{
+        display: inline-block;
+    }
+    .slideshow__slider:nth-child(2), .slideshow__slider:nth-child(3) {
+        display: none;
+    }*/
+
+    .slideshow__slider{
+        width: auto;
+        height: auto;
+        clear: both;
+        position: relative;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+    }
+    .slideshow__slider > *{
+        display: none;
+    }
+    .slide1{
+        display: inline-block;
+    }
+    .slideshow{
+        display: inline-block;
+        position: absolute;
+    }
+
+    .slide {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+    }
+
+    #slide1:target~.slideshow__slider {
+        left: 0px;
+    }
+
+    #slide2:target~.slideshow__slider {
+        left: -500px;
+    }
+
+    #slide3:target~.slideshow__slider {
+        left: -1000px;
+    }
+
+    .bullets {
+        position: relative;
+        top: -20px;
+        /*position: absolute;
+        z-index: 2;
+        bottom: 0;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;*/
+    }
+
+    .bullets a {
+        /*display: inline-block;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        border-radius: 50%;
+        margin:0;
+        padding: 0;*/
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+    }
+
+    .fa-circle {
+        border-radius: 50%;
+        background: #00aced;
+    }
+
+    .bullets>a+a {
+        /*background: #006989; /* Dim all but first */
+        opacity: 0.6;
+    }
+
+    .bullet:hover,
+    .bullet:focus {
+        border-radius: 50%;
+        background: #00aced !important;
+    }
+    .slideshow-container{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: center;
+        
+    }
+    .slideshow__overlay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #00aced;
+        width: auto;
+        height: 100%;
+        aspect-ratio: 1/1;
+        padding: 2.5em 2em 0 5em;
+        margin-left: -6.5em;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border: 2px solid #fff;
+        position: relative;
     }
 }
