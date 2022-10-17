@@ -21,6 +21,18 @@
       <label class="hamb" for="side-menu"><span class="menu-line" aria-hidden="true">☰</span>
         Menu
       </label>
+
+      <ul class="menu-desktop">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About SW</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact Us</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">View Products</a></li>
+      </ul>
+
+      <div class="menu-desktop__login"><a class="menu__link" href="#">
+          <span><i class="fa-solid fa-lock"></i></span>Login</a></li>
+      </div>
+
       <div class="header-shopcart">
         <ul class="header-shopcart__items">
           <li class="header-shopcart__item"><i class="fa-solid fa-cart-shopping"></i></li>
@@ -91,7 +103,7 @@
 
       <div class="slideshow-container">
         <div class="slideshow">
-          <img src="/Resources/Images/image-ball.png" alt="sports balls" width="849" height="300">
+          <img src="/Resources/Images/image-ball.png" aria-hidden="true" alt="sports balls" width="849" height="300">
         </div>
         <div class="slideshow__overlay">
           <h4>View our brand new range of</h4>
@@ -105,14 +117,14 @@
         </div>
       </div>
 
-      <div class="products-container">
+      <div class="products-container container">
         <div class="container-line">
           <h2 class="products-line">Featured products</h2>
         </div>
         <div class="products">
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="./Resources/Images/soccer-ball.png" class="item__photo" width="110" height="118"
+              <img src="./Resources/Images/soccer-ball.png" class="item__photo" width="137" height="137"
                 alt="Photo of adidas Euro16">
             </div>
             <div class="prices">
@@ -123,9 +135,9 @@
             <h3 class="item__name">Adidas Euro16</h3>
             <p class="item__description">Top Soccer Ball</p>
           </article>
-          <article class="products__item item">
+          <article class="products__item item fit">
             <div class="item__photo-frame">
-              <img src="./Resources/Images/skate-helmet.png" class="item__photo" width="300" height="120"
+              <img src="./Resources/Images/skate-helmet.png" class="item__photo" width="124" height="133"
                 alt="Photo of Pro-tec Classic">
             </div>
             <span class="price actual-price">$ 70.00</span>
@@ -134,7 +146,7 @@
           </article>
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="./Resources/Images/water-bottle.png" class="item__photo" width="120" height="300"
+              <img src="./Resources/Images/water-bottle.png" class="item__photo" width="109" height="138"
                 alt="Photo of Nike Sport 600ml">
             </div>
             <div class="prices">
@@ -145,9 +157,9 @@
             <h3 class="item__name">Nike Sport 600ml</h3>
             <p class="item__description">Water Bottle</p>
           </article>
-          <article class="products__item item">
+          <article class="products__item item fit">
             <div class="item__photo-frame">
-              <img src="./Resources/Images/boxing-gloves.png" class="item__photo" width="110" height="118"
+              <img src="./Resources/Images/boxing-gloves.png" class="item__photo" width="138" height="130"
                 alt="Photo of Sting ArmaPlus">
             </div>
             <span class="price actual-price">$ 79.95</span>
@@ -156,7 +168,7 @@
           </article>
           <article class="products__item item">
             <div class="item__photo-frame">
-              <img src="./Resources/Images/football-boots.png" class="item__photo" width="110" height="118"
+              <img src="./Resources/Images/football-boots.png" class="item__photo" width="133" height="75"
                 alt="Photo of Asics Gel Lethal">
             </div>
             <span class="price actual-price">$ 160.00</span>
@@ -166,76 +178,115 @@
         </div>
       </div>
 
-      <aside class="brands-container">
-        <div class="container-line">
+      <aside>
+        <div class="container-line container line">
           <h2 class="brands-line">Our brands and partnerships</h2>
         </div>
-        <p class="brands-description">These are some of our top brands and partenships.</p>
-        <b class="special">The best of the best is here.</b>
-
-        <div class="brands">
-          <div class="brand__photo-frame">
-            <img src="./Resources/Images/logo_nike.png" class="item__photo" width="70" height="24"
-              alt="Photo of item Name">
+        <div class="brands-container">
+          <div class="description">
+            <p class="brands-description">These are some of our top brands and partenships.</p>
+            <b class="special">The best of the best is here.</b>
           </div>
-          <div class="brand__photo-frame">
-            <img src="./Resources/Images/logo_adidas.png" class="item__photo" width="70" height="46"
-              alt="Photo of item Name">
-          </div>
-          <div class="brand__photo-frame">
-            <img src="./Resources/Images/logo_skins.png" class="item__photo" width="70" height="16"
-              alt="Photo of item Name">
-          </div>
-          <div class="brand__photo-frame">
-            <img src="./Resources/Images/logo_asics.png" class="item__photo" width="70" height="23"
-              alt="Photo of item Name">
-          </div>
-          <div class="brand__photo-frame">
-            <img src="./Resources/Images/logo_newbalance.png" class="item__photo" width="70" height="37"
-              alt="Photo of item Name">
-          </div>
-          <div class="brand__photo-frame">
-            <img src="./Resources/Images/logo_wilson.png" class="item__photo" width="70" height="16"
-              alt="Photo of item Name">
+          <div class="brands">
+            <div class="brand__photo-frame">
+              <img src="./Resources/Images/logo_nike.png" class="item__photo" width="70" height="24"
+                alt="Photo of item Name">
+            </div>
+            <div class="brand__photo-frame">
+              <img src="./Resources/Images/logo_adidas.png" class="item__photo" width="70" height="46"
+                alt="Photo of item Name">
+            </div>
+            <div class="brand__photo-frame">
+              <img src="./Resources/Images/logo_skins.png" class="item__photo" width="70" height="16"
+                alt="Photo of item Name">
+            </div>
+            <div class="brand__photo-frame">
+              <img src="./Resources/Images/logo_asics.png" class="item__photo" width="70" height="23"
+                alt="Photo of item Name">
+            </div>
+            <div class="brand__photo-frame">
+              <img src="./Resources/Images/logo_newbalance.png" class="item__photo" width="70" height="37"
+                alt="Photo of item Name">
+            </div>
+            <div class="brand__photo-frame">
+              <img src="./Resources/Images/logo_wilson.png" class="item__photo" width="70" height="16"
+                alt="Photo of item Name">
+            </div>
           </div>
         </div>
       </aside>
     </main>
-    <aside class="more-info">
-      <section class="site-nav">
-        <h2>Site navigation</h2>
-        <ul class="site-nav__items">
-          <li class="site-nav__item"><a class="home__link" href="#">Home</a></li>
-          <li class="site-nav__item"><a class="aboutSW__link" href="#">About SW</a></li>
-          <li class="site-nav__item"><a class="contactUs__link" href="#">Contact Us</a></li>
-          <li class="site-nav__item"><a class="viewProducts__link" href="#">View Products</a></li>
-          <li class="site-nav__item"><a class="privacy__link" href="#">Privacy Policy</a></li>
-        </ul>
-      </section>
-      <section class="contact-us">
-        <h2>Contact Sports Warehouse</h2>
-        <ul class="contact-us__options">
-          <li class="contact-us__option">
-            <div class="circle"><i class="fa-brands fa-facebook-f fa-2xl"></i></div>
-            <a class="facebook__link" href="#">Facebook</a>
-          </li>
-          <li class="contact-us__option">
-            <div class="circle"><i class="fa-brands fa-twitter fa-2xl"></i></div>
-            <a class="twitter__link" href="#">Twitter</a>
-          </li>
-          <li class="contact-us__option">
-            <div class="circle"><i class="fa fa-paper-plane fa-2xl" aria-hidden="true"></i></div>
-            <a class="other__link" href="#">Other</a>
-          </li>
-        </ul>
-      </section>
-    </aside>
-    <footer class="site-footer">
-      <p>© Copyright 2020 Sports Warehouse.</p>
-      <p>All rights reserved.</p>
-      <p>made by Awesomwsause Design.</p>
-    </footer>
   </div>
+  <aside class="more-info">
+    <section class="site-nav">
+      <h2>Site navigation</h2>
+      <ul class="site-nav__items">
+        <li class="site-nav__item"><a class="home__link" href="#">Home</a></li>
+        <li class="site-nav__item"><a class="aboutSW__link" href="#">About SW</a></li>
+        <li class="site-nav__item"><a class="contactUs__link" href="#">Contact Us</a></li>
+        <li class="site-nav__item"><a class="viewProducts__link" href="#">View Products</a></li>
+        <li class="site-nav__item"><a class="privacy__link" href="#">Privacy Policy</a></li>
+      </ul>
+    </section>
+
+    <section class="category-footer">
+      <h2>Product categories</h2>
+      <ul class="category-footer__items" id="category__items">
+        <li class="category-footer__item site-nav__item">
+          <a class="category__link" href="#">Shoes</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+        <li class="category-footer__item site-nav__item"><a class="category__link" href="#">Helmets</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+        <li class="category-footer__item site-nav__item"><a class="category__link" href="#">Pants</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+        <li class="category-footer__item site-nav__item"><a class="category__link" href="#">Tops</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+        <li class="category-footer__item site-nav__item"><a class="category__link" href="#">Balls</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+        <li class="category-footer__item site-nav__item"><a class="category__link" href="#">Equipment</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+        <li class="category-footer__item site-nav__item"><a class="category__link" href="#">Training gear</a>
+          <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="contact-us">
+      <h2>Contact Sports Warehouse</h2>
+      <ul class="contact-us__options">
+        <li class="contact-us__option">
+          <div class="circle"><i class="fa-brands fa-facebook-f fa-2xl"></i></div>
+          <a class="facebook__link" href="#">Facebook</a>
+        </li>
+        <li class="contact-us__option">
+          <div class="circle"><i class="fa-brands fa-twitter fa-2xl"></i></div>
+          <a class="twitter__link" href="#">Twitter</a>
+        </li>
+        <li class="contact-us__option">
+          <div class="circle"><i class="fa fa-paper-plane fa-2xl" aria-hidden="true"></i></div>
+          <a class="other__link" href="#">Other</a>
+          <ul class="other-infos">
+            <li class="other-infos__item"><a href="#">Online form</a></li>
+            <li class="other-infos__item"><a href="#">Email</a></li>
+            <li class="other-infos__item"><a href="#">Phone</a></li>
+            <li class="other-infos__item"><a href="#">Address</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </aside>
+  <footer class="site-footer">
+    <p>© Copyright 2020 Sports Warehouse.</p>
+    <p>All rights reserved.</p>
+    <p>made by Awesomwsause Design.</p>
+  </footer>
+
 </body>
 
 </html>
