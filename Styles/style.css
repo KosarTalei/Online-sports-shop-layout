@@ -95,7 +95,8 @@ h4 {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    font-size: 1.125em;/*18px;*/
+    font-size: 1.125em;
+    /*18px;*/
     font-weight: 300;
     color: #fff;
     text-align: center;
@@ -406,7 +407,7 @@ img:not(.png) {
     align-items: baseline;
     justify-content: space-between;
     align-items: center;
-    max-width: 9.375em;
+    /*max-width: 9.375em;*/
     min-height: 2.500em;
     margin: 0.3em 0 0.3em 0.3em;
     padding: 0.2em 0.4em;
@@ -425,8 +426,9 @@ img:not(.png) {
     background-color: #00aeede6;
     color: white;
 }
+
 .category__item:hover .arrow,
-.category__item:focus .arrow{
+.category__item:focus .arrow {
     color: white;
 }
 
@@ -474,6 +476,7 @@ img:not(.png) {
     align-items: center;
     gap: auto;
     align-items: stretch;
+    justify-content: space-between;
 }
 
 .item>* {
@@ -522,10 +525,17 @@ img:not(.png) {
 }
 
 .price {
-    font-size: 1.875em;/*30px*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*font-size: 1.875em;
+    /*30px*/
     font-weight: 400;
     color: #595959;
     /*min-height: 60px;*/
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 .discounted-price {
@@ -542,7 +552,8 @@ img:not(.png) {
     font-size: 1.25em;
     font-weight: 500;
     color: #006989;
-    padding: 0 0.5em 0.5em 0.5em;
+    /*padding: 0 0.5em 0.5em 0.5em;*/
+    margin: 0;
 }
 
 .special-was {
@@ -618,14 +629,16 @@ b.special {
     background-repeat: no-repeat;*/
     line-height: 0.5em;
     margin-bottom: 0.875em;
-    
+    white-space: nowrap;
+
 }
+
 .site-nav__item::before {
     content: "";
     width: 0.625em;
-    height:0.375em;
+    height: 0.375em;
     background: #006989;
-    display:inline-block;
+    display: inline-block;
     border-top-left-radius: 40%;
     border-bottom-left-radius: 40%;
     margin-right: 0.625em;
@@ -763,6 +776,7 @@ b.special {
     .item {
         border: 1px solid rgb(233, 229, 229);
         border-radius: 0.5em;
+        padding: 0.4em;
     }
 
     .item:focus,
@@ -786,6 +800,10 @@ b.special {
     display: none;
 }
 
+.bullets {
+    display: none;
+}
+
 @media only screen and (min-width: 700px) {
     .menu-desktop {
         display: flex;
@@ -795,9 +813,11 @@ b.special {
         margin: 0;
         flex-grow: 20;
     }
-    .nav{
+
+    .nav {
         display: none;
     }
+
     .header-shopcart {
         justify-content: flex-end;
     }
@@ -830,6 +850,7 @@ b.special {
         height: 100%;
         width: auto;
         height: auto;
+        position: relative;
     }
 
     /*.slideshow img {
@@ -864,11 +885,11 @@ b.special {
         padding: 10px 0;
         width: 100%;
         text-align: center;*/
+        display: block;
         left: 50%;
-        bottom: 12%;
-        /*1000px wide*/
+        bottom: 5%;
         max-width: calc(100% - 64px);
-        line-height: 3;
+        line-height: 1;
         position: absolute;
     }
 
@@ -923,7 +944,7 @@ b.special {
         overflow: hidden;
     }
 
-    .slideshow__overlay > h1 {
+    .slideshow__overlay>h1 {
         font-size: 2.500em;
         font-weight: 300;
         color: #fff;
@@ -963,16 +984,21 @@ b.special {
     }
 }
 
-@media only screen and (max-width: 370px) and (min-width: 320px) {
+@media only screen and (max-width: 401px) and (min-width: 320px) {
 
     .category__items,
     .products {
         display: grid;
         grid-template-columns: repeat(2, [col-start] 1fr);
-        /*gap: 0.625em;*/
+        gap: 0.2em;
         padding: 0;
         align-items: end;
         justify-items: stretch;
+        padding: 0 0.5em 0 0.5em;
+    }
+
+    .container-line {
+        margin: 1.75rem 0 1.75rem 0.63rem;
     }
 }
 
@@ -981,7 +1007,7 @@ b.special {
     display: none;
 }
 
-@media screen and (min-width: 324px) {
+@media screen and (min-width: 401px) {
     .brands {
         display: flex;
         justify-content: flex-start;
@@ -994,7 +1020,7 @@ b.special {
     .description {
         display: inline-block;
         max-width: 20%;
-        
+
     }
 
     .brands-container {
@@ -1003,15 +1029,18 @@ b.special {
         gap: 1.875em;
         align-items: center;
     }
+}
 
+@media screen and (min-width: 500px) {
     .category-footer {
         display: flex;
         flex-direction: column;
         padding: 1.56em 1em 1em 1em;
-        background-color: #ff690c;
+        background: #ff690c;
         color: #fff;
     }
-    .category-footer__items .site-nav__item::before{
+
+    .category-footer__items .site-nav__item::before {
         background: #595959;
     }
 
@@ -1073,11 +1102,24 @@ b.special {
         display: none;
     }
 }
+@media screen and (min-width: 500px) and (max-width: 660px) {
+    .more-info {
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .more-info > *{
+        width: 100%;
+    }
+}
 
-@media screen and (min-width:323px) {
+@media screen and (min-width:361px) {
     .site-footer {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -1091,37 +1133,56 @@ b.special {
 }
 
 @media screen and (min-width:950px) {
-    .prices{
+    .prices {
         flex-direction: row;
     }
-    .special-was{
+
+    .special-was {
         padding-left: 0;
     }
-    .price{
+
+    .price {
         padding-right: 0;
         font-size: 1.250em;
     }
-    .old-price{
+
+    .old-price {
         font-size: 1em;
     }
-    .cross{
+
+    .cross {
         padding-left: 0.313em;
     }
 }
-.category__link{
+
+.category__link {
     padding-left: 0.3em;
     white-space: nowrap;
 }
+
 @media only screen and (min-width: 980px) {
     .site-wrapper {
         max-width: 1000px;
         margin: auto;
     }
-    .wrapper{
+
+    .wrapper {
         padding: 0 6.250em 0 6.250em;
     }
-    .more-info{
+
+    .more-info {
         padding-left: 6.250em;
     }
 
 }
+.item{
+    height: 100%;
+    width: 100%;
+}
+/*handle equal height columns without a link
+.products{ columns container
+    display: flex;
+}
+.item{ child
+    flex: 1;
+}*/
