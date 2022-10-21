@@ -78,7 +78,7 @@ body {
 
 a,
 h1,
-h2 {
+h2,h3 {
     color: white;
     text-decoration: none;
 }
@@ -89,17 +89,25 @@ h2 {
     margin-top: 0;
 }
 
-h4 {
+.slideshow-view {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    font-size: 1.125em;
-    /*18px;*/
-    font-weight: 300;
+    font-size: 1.5em;
+    font-weight: 200;
     color: #fff;
     text-align: center;
+    margin: 0;
+}
+.slideshow-view__item{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: 300;
     margin: 0;
 }
 
@@ -143,7 +151,6 @@ span {
 
 .menu a {
     display: block;
-    padding-top: 1em 0 1em 0;
     color: white;
 }
 
@@ -299,7 +306,7 @@ img:not(.png) {
 /*shopping cart*/
 .header-shopcart {
     display: inline-block;
-    color: (white);
+    color: white;
     margin-left: 0.625em;
 }
 
@@ -310,6 +317,7 @@ img:not(.png) {
     padding: 0;
     list-style-type: none;
     margin-right: 0.5em;
+    gap: 0.5em;
 }
 
 .header-shopcart__item {
@@ -474,7 +482,6 @@ img:not(.png) {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    gap: auto;
     align-items: stretch;
     justify-content: space-between;
 }
@@ -818,8 +825,9 @@ b.special {
         display: none;
     }
 
-    .header-shopcart {
+    .header-shopcart__items {
         justify-content: flex-end;
+        margin-left: 0.625em;
     }
 
     .menu-desktop__login {
@@ -972,7 +980,7 @@ b.special {
     }
 
     .slideshow__overlay__shopnow {
-        padding: 0.2em 1em;
+        padding: 0.3em 1em;
         border-radius: 0.4em;
         font-size: 1.125em;
         background-color: #006989;
@@ -1102,6 +1110,7 @@ b.special {
         display: none;
     }
 }
+
 @media screen and (min-width: 500px) and (max-width: 660px) {
     .more-info {
         flex-direction: column;
@@ -1110,7 +1119,8 @@ b.special {
         align-items: center;
         align-content: center;
     }
-    .more-info > *{
+
+    .more-info>* {
         width: 100%;
     }
 }
@@ -1175,10 +1185,12 @@ b.special {
     }
 
 }
-.item{
+
+.item {
     height: 100%;
     width: 100%;
 }
+
 /*handle equal height columns without a link
 .products{ columns container
     display: flex;
@@ -1186,3 +1198,16 @@ b.special {
 .item{ child
     flex: 1;
 }*/
+.visually-hidden {
+    border-width: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+.searchLabel{
+    
+}

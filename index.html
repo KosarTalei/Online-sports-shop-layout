@@ -16,7 +16,7 @@
 <body>
   <header class="header wrapper">
     <!-- Hamburger icon -->
-    <input class="side-menu" type="checkbox" id="side-menu" />
+    <input class="side-menu" type="checkbox" id="side-menu">
     <div class="header__links">
       <label class="hamb" for="side-menu"><span class="menu-line" aria-hidden="true">☰</span>
         Menu
@@ -30,16 +30,13 @@
       </ul>
 
       <div class="menu-desktop__login"><a class="menu__link" href="#">
-          <span><i class="fa-solid fa-lock"></i></span>Login</a></li>
+          <span><i class="fa-solid fa-lock"></i></span>Login</a>
       </div>
 
-      <div class="header-shopcart">
-        <ul class="header-shopcart__items">
-          <li class="header-shopcart__item"><a class="header-shopcart__items__view" href="#">
-              <span><i class="fa-solid fa-cart-shopping"></i></span>View Cart</a>
-          </li>
-          <li class="header-shopcart__item"><a class="header-shopcart__items__cart-items-count">0 items</a></li>
-        </ul>
+      <div class="header-shopcart__items">
+        <a class="header-shopcart__item header-shopcart__items__view" href="#">
+          <span><i class="fa-solid fa-cart-shopping"></i></span>View Cart</a>
+        <a class="header-shopcart__item header-shopcart__items__cart-items-count">0 items</a>
       </div>
     </div>
     <!-- Menu -->
@@ -64,12 +61,12 @@
       <div class="sw-container">
         <h1 class="sr-only">SW Sports Warehouse</h1>
         <div class="logo-frame">
-          <img src="Resources/sports-warehouse-logo.svg" />
+          <img src="Resources/sports-warehouse-logo.svg" alt="Sports Warehouse Logo">
         </div>
         <form class="search" action="#">
-          <input class="search__products longeLable" type="text" name="productName" id="productName"
+          <label id="searchLabel" for="search" class="visually-hidden">search products here:</label>
+          <input class="search__products longeLable" id="search" aria-labelledby="searchLabel" type="text" name="productName" id="productName"
             placeholder="Search Products" value="">
-          <!--<label for="Search" class="longeLabel">Search Products</label>-->
           <button class="search__toggle" id="search-toggle" aria-label="Show/hide search results">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
@@ -107,14 +104,14 @@
           <img src="/Resources/Images/image-ball.png" aria-hidden="true" alt="sports balls" width="849" height="300">
         </div>
         <div class="slideshow__overlay">
-          <h4>View our brand <span>range of</span></h4>
-          <h1>Sports <br>balls</h1>
+          <h2 class="slideshow-view">View our brand <span> new range of</span></h2>
+          <h3 class="slideshow-view__item">Sports <span>balls</span></h3>
           <a class="slideshow__overlay__shopnow" href="#">Shop now</a>
         </div>
         <div class="bullets">
-          <a class="bullet" href="#slide1"><i class="fa-regular fa-circle"></i></a>
-          <a class="bullet" href="#slide2"><i class="fa-regular fa-circle"></i></a>
-          <a class="bullet" href="#slide3"><i class="fa-regular fa-circle"></i></a>
+          <a class="bullet" aria-label="#slide1"><i class="fa-regular fa-circle"></i></a>
+          <a class="bullet" aria-label="#slide2"><i class="fa-regular fa-circle"></i></a>
+          <a class="bullet" aria-label="#slide3"><i class="fa-regular fa-circle"></i></a>
         </div>
       </div>
 
@@ -123,8 +120,8 @@
           <h2 class="products-line">Featured products</h2>
         </div>
         <div class="products">
-          <a class="block" href="#adidas Euro16">
-            <article class="products__item item" href="#adidas Euro16">
+          <a class="block" href="#" aria-label="#adidas-Euro16">
+            <article class="products__item item">
               <div class="item__photo-frame">
                 <img src="./Resources/Images/soccer-ball.png" class="item__photo" width="137" height="137"
                   alt="Photo of adidas Euro16">
@@ -138,7 +135,7 @@
               <p class="item__description">Top Soccer Ball</p>
             </article>
           </a>
-          <a class="block" href="#Pro-tec Classic">
+          <a class="block" href="#" aria-label="#Pro-tec-Classic">
             <article class="products__item item fit">
               <div class="item__photo-frame">
                 <img src="./Resources/Images/skate-helmet.png" class="item__photo" width="124" height="133"
@@ -149,7 +146,7 @@
               <p class="item__description">Skate Helmet</p>
             </article>
           </a>
-          <a class="block" href="#Nike Sport 600ml">
+          <a class="block" href="#" aria-label="#Nike-Sport-600ml">
             <article class="products__item item">
               <div class="item__photo-frame">
                 <img src="./Resources/Images/water-bottle.png" class="item__photo" width="109" height="138"
@@ -164,7 +161,7 @@
               <p class="item__description">Water Bottle</p>
             </article>
           </a>
-          <a class="block" href="#Sting ArmaPlus">
+          <a class="block" href="#" aria-label="#Sting-ArmaPlus">
             <article class="products__item item fit">
               <div class="item__photo-frame">
                 <img src="./Resources/Images/boxing-gloves.png" class="item__photo" width="138" height="130"
@@ -175,7 +172,7 @@
               <p class="item__description">Boxing Gloves</p>
             </article>
           </a>
-          <a class="block" href="#Asics Gel Lethal">
+          <a class="block" href="#" aria-label="#Asics-Gel-Lethal">
             <article class="products__item item">
               <div class="item__photo-frame">
                 <img src="./Resources/Images/football-boots.png" class="item__photo" width="133" height="75"
@@ -201,27 +198,27 @@
           <div class="brands">
             <div class="brand__photo-frame">
               <img src="./Resources/Images/logo_nike.png" class="item__photo" width="70" height="24"
-                alt="Photo of item Name">
+                alt="Photo of Nike logo">
             </div>
             <div class="brand__photo-frame">
               <img src="./Resources/Images/logo_adidas.png" class="item__photo" width="70" height="46"
-                alt="Photo of item Name">
+                alt="Photo of Adidas logo">
             </div>
             <div class="brand__photo-frame">
               <img src="./Resources/Images/logo_skins.png" class="item__photo" width="70" height="16"
-                alt="Photo of item Name">
+                alt="Photo of Skins logo">
             </div>
             <div class="brand__photo-frame">
               <img src="./Resources/Images/logo_asics.png" class="item__photo" width="70" height="23"
-                alt="Photo of item Name">
+                alt="Photo of Asics logo">
             </div>
             <div class="brand__photo-frame">
               <img src="./Resources/Images/logo_newbalance.png" class="item__photo" width="70" height="37"
-                alt="Photo of item Name">
+                alt="Photo of New Balance logo">
             </div>
             <div class="brand__photo-frame">
               <img src="./Resources/Images/logo_wilson.png" class="item__photo" width="70" height="16"
-                alt="Photo of item Name">
+                alt="Photo of Wilson logo">
             </div>
           </div>
         </div>
@@ -242,7 +239,7 @@
 
     <section class="category-footer">
       <h2>Product categories</h2>
-      <ul class="category-footer__items" id="category__items">
+      <ul class="category-footer__items" id="category-footer__items">
         <li class="category-footer__item site-nav__item">
           <a class="category__link" href="#">Shoes</a>
           <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
