@@ -1,10 +1,8 @@
 <h1>Online sports shop</h1>
-<h2>Creating the static website layout<h2>
+<h2>Creating the static website layout</h2>
 
 # Project overview
-<p>
-Sports Warehouse is a retail company that would like to start selling sports equipment online. The project will be delivered in four stages.
-</p>
+<p>Sports Warehouse is a retail company that would like to start selling sports equipment online. The project will be delivered in four stages.</p>
 
 # Design requirements
 A Photoshop file which contains the desktop design and mobile design for the website.
